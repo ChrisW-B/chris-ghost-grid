@@ -1,0 +1,16 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+  <main id="site-main" class="site-main outer">
+    <div class="inner">
+      <article class="post-full {{post_class}}">
+        <section class="post-full-content">
+          {{content}}
+        </section>
+      </article>
+    </div>
+  </main>
+  {{!-- Links to Previous/Next posts --}}
+{{/post}}
