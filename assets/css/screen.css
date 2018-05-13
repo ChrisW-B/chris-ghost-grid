@@ -1,17 +1,30 @@
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
-
 @import "global.css";
 
 body {
-  background-color: #f6f6f6;
+  background-color: var(--lightgrey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: var(--darkgrey);
+}
+
+a h1 {
+  color: var(--blue);
 }
 
 .post-feed {
-  background: #fefefe;
+  background: var(--whitegrey);
   display: grid;
   margin: 0 auto;
   max-width: 160rem;
+  min-height: 100vh;
 }
 
 .post_preview.post,
@@ -43,7 +56,7 @@ body {
 }
 
 .post_preview.post a p {
-  color: #3c484e;
+  color: var(--darkgrey);
   text-decoration: none;
 }
 
@@ -61,22 +74,25 @@ body {
   justify-self: stretch;
 }
 
-@media screen and (min-width: 0) {
+@media screen and (min-width:0) {
   .post-feed {
-    grid-auto-rows: 30rem;
+    grid-auto-rows: 25rem;
     grid-template-columns: 1fr;
   }
+
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width:800px) {
   .post-feed {
-    grid-auto-rows: 50rem;
+    grid-auto-rows: 45rem;
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width:1600px) {
   .post-feed {
     grid-template-columns: repeat(3, 1fr);
   }
+
 }
