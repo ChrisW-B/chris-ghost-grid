@@ -1,3 +1,8 @@
-<article class="{{post_class}} {{#if feature_image}}featured_post{{/if}}" style="background-image:url('{{feature_image}}')">
-  {{title}}
+<article class="post_preview {{post_class}} {{#if featured}}featured_post{{/if}}" style="background-image:url('{{feature_image}}')">
+  <a href="{{url}}" class='post_link'>
+    {{#unless feature_image}}
+      <h1>{{title}}</h1>
+      <p>{{excerpt words="60"}}...</p>
+    {{/unless}}
+    </a>
 </article>

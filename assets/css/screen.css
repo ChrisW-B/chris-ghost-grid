@@ -1,64 +1,83 @@
-/* Table of Contents
-/* ------------------------------------------------------------
-
-This is a development CSS file which is built to a minified
-production stylesheet in assets/built/screen.css
-
-1.  Global Styles
-2.  Layout
-3.  Special Templates
-4.  Site Header
-5.  Site Navigation
-6.  Post Feed
-7.  Single Post
-  7.1. Subscribe Form
-  7.2. Post Footer
-     7.2.1 Single Author Byline
-     7.2.2 Multiple Author Byline
-  7.3. Comments
-  7.4. Related Posts
-  7.5. Floating Header
-8.  Author Template
-9.  Error Template
-10. Subscribe Overlay
-11. Site Footer
-
-*/
-
-
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 
 @import "global.css";
 
+body {
+  background-color:;
+}
+
 .post-feed {
   display: grid;
+  margin: 0 auto;
+  max-width: 160rem;
 }
 
-.post, .bio_title {
+.post_preview.post,
+.blog_info {
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.featured_post {
-  /* grid-row: 1 / 3; */
+.post_preview.post:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
+.post_preview.post a {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
 
-@media screen and (min-width: 0px) {
+.post_preview.post a p,
+.post_preview.post a h1 {
+  padding: 0 2rem 0 2rem;
+}
+
+.post_preview.post a h1 {
+  margin-bottom: 0.5rem;
+}
+
+.post_preview.post a p {
+  color: #3c484e;
+  text-decoration: none;
+}
+
+.post_preview.post a:hover {
+  text-decoration: none;
+}
+
+.bio_title {
+}
+
+.post_link {
+  align-self: stretch;
+  flex: 1 1 auto;
+  justify-self: stretch;
+}
+
+@media screen and (min-width: 0) {
   .post-feed {
-    grid-template-columns: 1fr
+    grid-auto-rows: 30rem;
+    grid-template-columns: 1fr;
   }
+
 }
 
 @media screen and (min-width: 800px) {
   .post-feed {
-    grid-template-columns: repeat(2, 1fr)
+    grid-auto-rows: 50rem;
+    grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media screen and (min-width: 1600px) {
   .post-feed {
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(3, 1fr);
   }
+
 }
