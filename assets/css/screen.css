@@ -4,10 +4,11 @@
 @import "global.css";
 
 body {
-  background-color:;
+  background-color: #f6f6f6;
 }
 
 .post-feed {
+  background: #fefefe;
   display: grid;
   margin: 0 auto;
   max-width: 160rem;
@@ -50,7 +51,8 @@ body {
   text-decoration: none;
 }
 
-.bio_title {
+.blog_info {
+  padding: 0 2rem;
 }
 
 .post_link {
@@ -64,7 +66,6 @@ body {
     grid-auto-rows: 30rem;
     grid-template-columns: 1fr;
   }
-
 }
 
 @media screen and (min-width: 800px) {
@@ -72,12 +73,10 @@ body {
     grid-auto-rows: 50rem;
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 @media screen and (min-width: 1600px) {
   .post-feed {
     grid-template-columns: repeat(3, 1fr);
   }
-
 }

@@ -1,7 +1,5 @@
 
-assets/built
+assets/built/
 node_modules
 LICENSE
 README.md
-assets/built/
-

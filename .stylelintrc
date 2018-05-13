@@ -1,25 +1,35 @@
 {
-  "extends": "stylelint-config-standard",
-  "syntax": "css",
-  "plugins": [
-    "stylelint-order",
-  ],
-  "rules": {
-    "rule-empty-line-before": null,
-    "no-empty-source": null,
-    "no-missing-end-of-source-newline": null,
-    "at-rule-empty-line-before": "always",
-    "font-family-name-quotes": "always-where-recommended",
-    "value-no-vendor-prefix": true,
-    "declaration-no-important": true,
-    "font-weight-notation": "numeric",
-    "order/order": [
-      "declarations",
-      "rules",
-      "at-rules"
+    "extends": "stylelint-config-standard",
+    "syntax": "css",
+    "plugins": [
+        "stylelint-order",
     ],
-    "order/properties-alphabetical-order": true,
-    "color-hex-case": null,
-    "unit-blacklist": ["px", "em"]
-  }
+    "rules":
+    {
+        "rule-empty-line-before": null,
+        "no-empty-source": null,
+        "no-missing-end-of-source-newline": null,
+        "at-rule-empty-line-before": "always",
+        "font-family-name-quotes": "always-where-recommended",
+        "value-no-vendor-prefix": true,
+        "declaration-no-important": true,
+        "font-weight-notation": "numeric",
+        "order/order": [
+            "declarations",
+            "rules",
+            "at-rules"
+        ],
+        "order/properties-alphabetical-order": true,
+        "color-hex-case": null,
+        "unit-blacklist": [
+            ["ch", "cm", "em", "in", "mm", "pc", "pt", "px"],
+            {
+                "ignoreMediaFeatureNames":
+                {
+                    "px": ["min-width"]
+                }
+            }
+        ],
+
+    }
 }
