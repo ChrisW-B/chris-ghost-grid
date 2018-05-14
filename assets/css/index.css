@@ -73,6 +73,12 @@ a h1 {
   flex: 1 1 auto;
   justify-self: stretch;
 }
+.blog_info.footer{
+  justify-content: space-between;
+}
+.navigation {
+  margin: 4rem 0;
+}
 
 @media screen and (min-width:0) {
   .post-feed {

@@ -2,6 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
+<link rel="stylesheet" type="text/css" href="{{asset "built/index.css"}}" />
 <main id="site-main" class="site-main outer">
   <div class="post-feed">
     {{> blog_info}}
@@ -11,4 +12,4 @@ into the {body} of the default.hbs template --}}
     {{> blog_footer}}
   </div>
 </main>
-<link rel="stylesheet" type="text/css" href="{{asset "built/index.css"}}" />
+

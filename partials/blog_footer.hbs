@@ -1,3 +1,9 @@
-<aside class="blog_info">
-  <p>© {{date format="YYYY"}} {{@blog.title}} <p>
+<aside class="blog_info footer">
+  <p>© {{date format="YYYY"}} {{@blog.title}}</p>
+  {{#if posts}}
+    <nav class='navigation'>
+      {{!-- only show navigation on the home page --}}
+      {{pagination}}
+    </nav>
+  {{/if}}
 </aside>

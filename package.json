@@ -56,6 +56,6 @@
         "stylelint-order": "^0.8.1"
     },
     "config": {
-        "posts_per_page": 25
+        "posts_per_page": 3
     }
 }
