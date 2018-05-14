@@ -2,15 +2,27 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
+<link rel="stylesheet" type="text/css" href="{{asset "built/post.css"}}" />
 {{#post}}
-  <main id="site-main" class="site-main outer">
-    <div class="inner">
-      <article class="post-full {{post_class}}">
-        <section class="post-full-content">
-          {{content}}
-        </section>
-      </article>
-    </div>
-  </main>
-  {{!-- Links to Previous/Next posts --}}
+  <div id="site-main" class="site-main outer">
+    <header class='title_and_nav'>
+      <span class='nav_arrow'>
+        {{#prev_post}}
+          <a title='{{title}}' href="{{url}}">&larr;</a>
+        {{/prev_post}}
+      </span>
+      <h2 class='blog_title'><a href= {{@blog.url}}>{{@blog.title}}</a></h2>
+      <span class='nav_arrow'>
+        {{#next_post}}
+          <a title='{{title}}' href="{{url}}">&rarr;</a>
+        {{/next_post}}
+      </span>
+    </header>
+    {{>post_content}}
+    <section class='about_post'>
+      {{>post_info}}
+      {{>post_tags}}
+    </section>
+  </div>
 {{/post}}
+{{>blog_footer}}

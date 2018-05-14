@@ -79,7 +79,6 @@ a h1 {
     grid-auto-rows: 25rem;
     grid-template-columns: 1fr;
   }
-
 }
 
 @media screen and (min-width:800px) {
@@ -87,12 +86,10 @@ a h1 {
     grid-auto-rows: 45rem;
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 @media screen and (min-width:1600px) {
   .post-feed {
     grid-template-columns: repeat(3, 1fr);
   }
-
 }

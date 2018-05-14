@@ -1,0 +1,88 @@
+/* 1. Global - Set up the things
+/* ---------------------------------------------------------- */
+
+@import "global.css";
+
+body {
+  background: var(--whitegrey);
+  color: var(--darkgrey);
+}
+
+.blog_title {
+  border-bottom: 0.2rem solid var(--blue);
+}
+
+.site-main.outer {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.post-full-content {
+  margin-top: 3rem;
+  max-width: 120rem;
+}
+
+.post-full.post {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 120rem;
+}
+
+.blog_info {
+  border-top: 0.1rem solid var(--midgrey);
+  margin: 5rem auto 0 auto;
+  max-width: 90rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.nav_arrow {
+  font-size: 3rem;
+  min-width: 3rem;
+  padding: 2rem;
+}
+
+.title_and_nav {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 3rem 0;
+  max-width: 90rem;
+  width: 100%;
+}
+
+.large_image {
+  max-height: 120rem;
+}
+
+.title_and_nav h2 {
+  margin: 0;
+}
+
+.about_post {
+  font-style: italic;
+  max-width: 90rem;
+}
+
+@media screen and (min-width: 0) {
+  .post-full-content,
+  .about_post {
+    width: 95%;
+  }
+  .post-full.post {
+    margin: 0 0.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .post-full-content,
+  .about_post {
+    width: 75%;
+  }
+  .post-full.post {
+    margin: 0 3rem;
+  }
+}
